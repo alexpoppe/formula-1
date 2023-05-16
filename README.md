@@ -39,5 +39,5 @@ If you run the manual approach, all the tested combinations will be written to t
 If you want to test other calendars, you can just edit the races.txt file. You can add or remove rows but make sure you use the same formatting for every race location (Don't add any unnecessary spacing). Every line uses the following format:
 
 ```csv
-<name>,<latitude>,<longitude>
+<race name>,<latitude>,<longitude>
 ```
