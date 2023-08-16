@@ -1,0 +1,36 @@
+Calendar
+	21. Brazil (São Paulo) -> America
+	5. United States (Miami) -> America
+	19. United States (Austin) -> America
+	20. Mexico (Mexico City) -> America
+	22. United States (Las Vegas) -> America
+	9. Canada (Montreal) -> America
+	11. Great Britain (Silverstone) -> Europe
+	14. Netherlands (Zandvoort) -> Europe
+	13. Belgium (Spa) -> Europe
+	15. Italy (Monza) -> Europe
+	6. Italy (emilia romagna) -> Europe
+	7. Monaco (Monte carlo) -> Europe
+	8. Spain (Barcelona) -> Europe
+	10. Austria (Knittefeld) -> Europe
+	12. Hungary (Budapest) -> Europe
+	4. Azerbaijan (Baku) -> Europe
+	1. Bahrain (Sakhir) -> Europe
+	18. Qatar (Lusail) -> Europe
+	23. United Arab Emirates (Abu Dhabi) -> Europe
+	2. Saudi Arabia (Jeddah) -> Europe
+	16. Singapore (nan) -> Europe
+	17. Japan (Suzuka) -> Europe
+	3. Australia (Melbourne) -> Europe
+total distance: 743714.473421461 km
+
+Mercedes: UK, Brackley (74251.14093909452 km)
+Ferrari: Italy, Maranello (74654.89326239034 km)
+Red Bull: UK, Milton keynes (74234.50654595906 km)
+McLaren: UK, Woking (74310.07594777548 km)
+Aston Martin: UK, Silverstone (74231.65690054071 km)
+Alpine: UK, Enstone (74290.81319434781 km)
+Haas: UK, Banbury (74270.27118474548 km)
+AlphaTauri: Italy, Faenza (74645.67366215253 km)
+Alfa Romeo: Switzerland, Hinwill (74496.27904259553 km)
+Williams: UK, Grove (74329.16274185957 km)
