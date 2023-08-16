@@ -6,19 +6,19 @@ import sys
 
 
 def read_races():
-    with open('races.txt', 'r') as f:
+    with open('races2023.txt', 'r') as f:
         text = f.readlines()
         
     races = []
     for info in text:
         info = info.strip().split(',')
-        race = Race(info[0], float(info[1]), float(info[2]))
+        race = Race(info[0], info[1], float(info[2]), float(info[3]))
         races.append(race)
         
     return races
 
 def write_races(calendars):
-    with open('calendars.txt', 'w') as f:
+    with open('calendars2023.txt', 'w') as f:
         for calendar in calendars:
             f.write(str(calendar))
 
@@ -59,19 +59,18 @@ def automatic_calculations():
 
 
 if __name__ == "__main__":
-    try:
-        argument = sys.argv[1]
-        print()
-        if argument == "manual":
-            manual_calculations()
-        elif argument == "automatic":
-            automatic_calculations()
-        elif argument == "both":
-            manual_calculations()
-            print('------------------\n')
-            automatic_calculations()
-        else:
-            print("Not a valid argument, choose from: 'manual', 'automatic' or 'both'")
-    except IndexError as e:
-        print("You didn't give an argument, choose from: 'manual', 'automatic' or 'both")
+    
+    argument = sys.argv[1]
+    if argument == "manual":
+        manual_calculations()
+    elif argument == "automatic":
+        automatic_calculations()
+    elif argument == "both":
+        manual_calculations()
+        print('------------------\n')
+        automatic_calculations()
+    else:
+        print("Not a valid argument, choose from: 'manual', 'automatic' or 'both' ")
+    # except IndexError as e:
+    #     print("You didn't give an argument, choose from: 'manual', 'automatic' or 'both")
     

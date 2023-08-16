@@ -4,7 +4,7 @@ China,35.8617,104.1954
 Baku,40.4093,49.8671
 Barcelona,41.3874,2.1686
 Monaco,43.7384,7.4246
-Montreal,7.4246,-73.5674
+Montreal,45.5041,-73.5274
 Le Castellet,43.2036,5.7768
 Spielberg,47.2086,14.7996
 Silverstone,52.0733,-1.0147

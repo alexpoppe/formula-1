@@ -1,10 +1,28 @@
 
 from geopy.distance import geodesic
 
+
+class Constructor:
+    def __init__(self, name: str, country: str, city: str, latitude: float, longitude: float) -> None:
+        self.name = name
+        self.country = country
+        self.city = city
+        self.base = (latitude, longitude)
+        
+    
+    def calculate_distance(self, race: "Race") -> int:
+        coords_1 = (race.latitude, race.longitude)
+        
+        return geodesic(coords_1, self.base).km
+    
+    def __repr__(self) -> str:
+        return f"{self.name}: {self.base}"
+
         
 class Race:
-    def __init__(self, name: str, latitude: float, longitude: float) -> None:
-        self.name = name
+    def __init__(self, country: str, city: str, latitude: float, longitude: float) -> None:
+        self.country = country
+        self.city = city
         self.latitude = latitude
         self.longitude = longitude
         
@@ -26,19 +44,18 @@ class Race:
     
     
     def __repr__(self) -> str:
-        return f"Race {self.name} {self.latitude, self.longitude}"
+        return f"Race {self.country, self.city} {self.latitude, self.longitude}"
                 
 
         
 class Calendar:
-    def __init__(self, races: list=[], to_plan: list=[]) -> None:
+    def __init__(self, races: list=[], to_plan: list=[], include_base: bool=True) -> None:
         self.races = races
         self.to_plan = to_plan
         self.distance = 0
+        self.include_base = include_base
         if races:
             _ = self.calculate_distance()
-        
-        
         
     def add_race(self, race: Race) -> list:
         if self.races:
