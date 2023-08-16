@@ -32,3 +32,12 @@ The mode determines which calculation is used. Although this doesn't change the 
 The manual mode is a manual calculation that does a simple approximation of the travelling salesman problem without relying on any outside libraries. The automatic calculation uses the greedy approximation to the travelling salesman problem from the NetworkX library from python. You can find more information about how the approximations with NetworkX work in [this link](https://networkx.org/documentation/stable/reference/algorithms/approximation.html).
 
 The result of the calculations will be printed to the terminal.
+If you run the manual approach, all the tested combinations will be written to the file calendars.txt in ascending order of distance.
+
+## Adaptations
+
+If you want to test other calendars, you can just edit the races.txt file. You can add or remove rows but make sure you use the same formatting for every race location (Don't add any unnecessary spacing). Every line uses the following format:
+
+```csv
+<race name>,<latitude>,<longitude>
+```
