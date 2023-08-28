@@ -1,8 +1,14 @@
 # formula-1
 
-In this repository, the formula 1 races in the year of 2019 are analysed to find the race-calendar that has the shortest travelling distance that covers all races.
+In this repository, the formula 1 races in the year of 2019 are analysed to find the race-calendar that has the shortest travelling distance that covers all races. There are 3 different scenarios that rely on hubs. A hub is a storage location for all the needed material.
 
-You can find the race locations with their coordinates in the file races.txt.
+## Scenario 1 - 1 HUB
+
+There is only one hub available for storage. This hub will be equal to the one that 
+
+
+
+
 
 ## Installation
 

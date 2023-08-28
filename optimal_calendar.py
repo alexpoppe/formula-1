@@ -42,4 +42,4 @@ if __name__ == "__main__":
     min_cycle, min_cost = calculate_optimal(graph, races)
     print(min_cycle, min_cost)
     indexes = [race.id for race in min_cycle]
-    print(indexes)
+    print('PERFECT INDEXES: ', indexes)
