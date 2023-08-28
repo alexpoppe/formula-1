@@ -93,7 +93,7 @@ class Race:
         if self.id:
             value += f"{self.id}. "
         
-        return value + f"{self.country} ({self.city}) -> {self.location_group}"
+        return value + f"{self.country} ({self.city}) [{self.location_group}]"
 
 
 class Calendar:

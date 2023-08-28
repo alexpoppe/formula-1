@@ -35,11 +35,20 @@ def calculate_optimal(graph, races: list):
             min_cost = cost
     return min_cycle, min_cost
 
+def print_races(races: list, distance: float) -> None:
+    result = ""
+    for race in races:
+        result += str(race) + " -> "
+
+    print(result[:-4])
+    print(f"total distance: {distance} km")
 
 if __name__ == "__main__":
+    print()
     races = create_races(n_hubs=1)
     graph = create_graph(races)
     min_cycle, min_cost = calculate_optimal(graph, races)
-    print(min_cycle, min_cost)
+    print_races(min_cycle, min_cost)
+    
     indexes = [race.id for race in min_cycle]
-    print('PERFECT INDEXES: ', indexes)
+    print('\nPERFECT INDEXES: ', indexes)
