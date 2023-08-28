@@ -5,7 +5,7 @@ from networkx.algorithms import approximation as approx
 
 
 def create_races(n_hubs: int=3) -> list:
-    data = pd.read_csv('races2023.csv')
+    data = pd.read_csv('data/races2023.csv')
     hub_column = 'hub' + str(n_hubs)
     
     races = []

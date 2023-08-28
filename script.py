@@ -10,7 +10,7 @@ PERFECT_INDEXES = [21, 5, 19, 20, 22, 9, 11, 14, 13, 15, 6, 7, 8, 10, 12, 4, 1, 
 
 
 def create_constructors() -> list:
-    homebases = pd.read_csv('homebases.csv')
+    homebases = pd.read_csv('data/homebases.csv')
     
     constructors = []
     for _, row in homebases.iterrows():
@@ -20,7 +20,7 @@ def create_constructors() -> list:
     return constructors
 
 def create_races(n_hubs: int=3) -> list:
-    data = pd.read_csv('races2023.csv')
+    data = pd.read_csv('data/races2023.csv')
     hub_column = 'hub' + str(n_hubs)
     
     races = []
@@ -39,7 +39,7 @@ def create_calendar(races: list, constructors: list, order: list=None) -> Calend
 
 def write_data(calendar: Calendar, n_hubs: int, calendar_type: str):
     filename = calendar_type + '_calendar_' + n_hubs + 'hubs.txt'
-    filepath = os.path.join('calendars', filename)
+    filepath = os.path.join('output', filename)
     with open(filepath, 'w') as f:
         f.write(str(calendar))
 
