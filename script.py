@@ -1,6 +1,7 @@
 from classes import Constructor, Race, Calendar, AMERICA_BASE, ASIA_BASE
 import pandas as pd
 import sys
+import os
 
 # These are the indexes of all the races in a list that follows the perfect route with the least distance.
 # This would be the perfect calendar based on distance.
@@ -37,11 +38,12 @@ def create_calendar(races: list, constructors: list, order: list=None) -> Calend
     return calendar
 
 def write_data(calendar: Calendar, n_hubs: int, calendar_type: str):
-    filename = calendar_type + '_calendar_' + n_hubs + 'hubs.txt' 
-    with open(filename, 'w') as f:
+    filename = calendar_type + '_calendar_' + n_hubs + 'hubs.txt'
+    filepath = os.path.join('calendars', filename)
+    with open(filepath, 'w') as f:
         f.write(str(calendar))
 
-    print(f"written {calendar_type} calendar to the file {filename}")
+    print(f"written {calendar_type} calendar to the file {filepath}")
         
 if __name__ == '__main__':
     n_hubs = sys.argv[1]
@@ -53,6 +55,3 @@ if __name__ == '__main__':
     
     optimal_calendar = create_calendar(races, constructors, order=PERFECT_INDEXES)
     write_data(optimal_calendar, n_hubs, calendar_type='optimal')
-    
-    
-    
